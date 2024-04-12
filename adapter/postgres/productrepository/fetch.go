@@ -14,7 +14,8 @@ func (repository repository) Fetch(pagination *dto.PaginationRequestParms) (*dom
 	products := []domain.Product{}
 	total := int32(0)
 
-	query, queryCount, err := paginate.Paginate("SELECT * FROM product").
+	query, queryCount, err := paginate.
+		Pagination("SELECT * FROM product").
 		Page(pagination.Page).
 		Desc(pagination.Descending).
 		Sort(pagination.Sort).
