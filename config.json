@@ -1,0 +1,8 @@
+{
+    "database": {
+      "url": "your_database"
+    },
+    "server": {
+      "port": "3000"
+    }
+  }
